@@ -1,0 +1,27 @@
+{
+  "name": "gdsc",
+  "version": "1.0.0",
+  "description": "Student Course Registration website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/index.js",
+    "dev": "set MODE=DEVELOPMENT& nodemon backend/index.js",
+    "pro": "set MODE=PRODUCTION& nodemon backend/index.js"
+  },
+  "author": "Madhav Ganesan",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
