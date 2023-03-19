@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import Admin from "../models/admin.js";
 
 const adminCheck=async(req,res,next)=>{
-    
+    //Get token
     const cookies=req.headers.cookie
     const token=cookies.split("=")[1]
 
@@ -12,6 +12,7 @@ const adminCheck=async(req,res,next)=>{
         })
     }
     
+    //Verify token
     jwt.verify(String(token),process.env.JWT_SECRET_KEY,(err,found)=>{
         if(err){
             return res.status(400).json({message:"Invalid token"})

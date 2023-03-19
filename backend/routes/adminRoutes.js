@@ -12,6 +12,7 @@ router.route("/register/").post(clearCookie,adminSignUp)
 router.route("/login/").post(oldLogOut,adminSignIn)
 router.route("/logout/").get(adminLogOut)
 
+//Protected Routes
 router.route("/add/").post(adminCheck,authorizeRoles("admin"),addCourse)
 router.route("/delete/:id").delete(adminCheck,authorizeRoles("admin"),deleteCourse)
 router.route("/delete/user/:id").delete(adminCheck,authorizeRoles("admin"),deleteUser)

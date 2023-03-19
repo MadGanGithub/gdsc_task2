@@ -10,7 +10,7 @@ router.route("/register/").post(clearCookie,signUp)
 router.route("/login/").post(oldLogOut,signIn)
 router.route("/logout/").get(logOut)
 
-//To be protected routes
+//Protected Routes
 router.route("/get/").get(userCheck,getCourses)
 router.route("/apply/:id").put(userCheck,applyCourse)
 router.route("/show/").get(registeredCourses)

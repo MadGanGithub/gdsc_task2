@@ -4,6 +4,7 @@ import Course from "../models/course.js";
 import {hashed,comparePassword} from "../utils/authUtils.js";
 import User from "../models/user.js";
 
+//Api to signup
 const adminSignUp=async(req,res)=>{
     try{
 
@@ -28,7 +29,7 @@ const adminSignUp=async(req,res)=>{
     }
 }
 
-
+//Api to signin
 const adminSignIn=async(req,res)=>{
     try{
         
@@ -81,8 +82,6 @@ const adminSignIn=async(req,res)=>{
             sameSite:'lax'
 
         })
-
-        // window.location.href='/dashboard'
         //finally
         res.status(200).send({
             status:true,
@@ -100,12 +99,9 @@ const adminSignIn=async(req,res)=>{
     }
 }
 
-
+//Api to add a course
 const addCourse=async(req,res,next)=>{
-
     try{
-
-        
         const find=await Course.findOne({
             name:req.body.name
         })
@@ -143,6 +139,7 @@ const addCourse=async(req,res,next)=>{
     
 }
 
+//Api to delete a course
 const deleteCourse=async(req,res,next)=>{
 
     try{
@@ -172,6 +169,7 @@ const deleteCourse=async(req,res,next)=>{
     
 }
 
+//Api to log out
 const adminLogOut=async(req,res,next)=>{
     res.clearCookie('admin')
 
@@ -180,7 +178,7 @@ const adminLogOut=async(req,res,next)=>{
         message:"Logged-out"
     })
 }
-
+//Api to delete an user
 const deleteUser=async(req,res,next)=>{
 
     try{
@@ -211,6 +209,7 @@ const deleteUser=async(req,res,next)=>{
 
 }
 
+//Api to add an User
 const addUser=async(req,res,next)=>{
 
     try{

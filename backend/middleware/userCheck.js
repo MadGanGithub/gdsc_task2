@@ -3,6 +3,7 @@ import User from "../models/user.js";
 
 const userCheck=async(req,res,next)=>{
 
+    //Get token
     const cookies=req.headers.cookie
     const token=cookies.split("=")[1]
 
@@ -12,6 +13,7 @@ const userCheck=async(req,res,next)=>{
         })
     }
 
+    //Verify token
     jwt.verify(String(token),process.env.JWT_SECRET_KEY,(err,found)=>{
         if(err){
             return res.status(400).json({message:"Invalid token"})
@@ -19,7 +21,7 @@ const userCheck=async(req,res,next)=>{
 
         req.regno=found.regno
     });
-
+    
     const data=await User.findOne({regno:req.regno})
     const user=await User.findById(data.id)
 
