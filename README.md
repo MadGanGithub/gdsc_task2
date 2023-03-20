@@ -18,6 +18,79 @@ To run this project, you will need to add the following environment variables to
 
 `DB_LOCAL_URI` mongodb+srv://madskey95:O58Ll0NbFVjkl46V@task2.8rnhav3.mongodb.net/?retryWrites=true&w=majority
 
+## How to use?
+
+1)Clone this repository and start the server.
+    Steps to clone the repository in Visual Studio Code:
+    1)Click Clone git repository on the home page.
+    2)Copy the repository link from github and paste it over here.
+
+2)Open Postman app and create new request.
+
+3)First of all,login using admin credentials.(POST request)
+
+{
+    "regno":1234,
+    "key":"gdscweb@sastra"
+}
+
+4)Add users to the database(POST request).
+
+{
+    "regno":125156072,
+    "email":"125156072@sastra.ac.in",
+    "password":"testaddusingadmin"
+}
+
+
+5)Login using one of the registered user.(POST request)
+
+{
+    "regno":125156072,
+    "password":"testaddusingadmin"
+}
+
+6)Select any one of three options:
+  '
+  
+  #Display all courses:
+
+  http://localhost:5001/enter/get/
+
+  #Register a course:
+
+  {
+    "course":"Laws of Cricket"
+}
+
+  #Display registered course:
+
+  http://localhost:5001/enter/show/
+
+
+7)Logout the user.
+
+8)Again login using admin credentials and select any of the four options:
+
+#Delete user:
+http://localhost:5001/enter/admin/delete/user/:id
+
+#Add user:
+http://localhost:5001/enter/admin/add/user/
+
+#Delete course:
+http://localhost:5001/enter/admin/delete/:id
+
+#Add course:
+http://localhost:5001/enter/admin/add/
+
+{
+    "name":"Laws of Cricket",
+    "description":"About cricket",
+    "mode":"offline",
+    "slots":15
+}
+
 
 ## Usage/Examples
 
@@ -85,75 +158,7 @@ ADMIN CREDENTIALS
 }
 
 
-## How to use?
 
-1)Clone this repository and start the server.
-
-2)Open Postman app and create new request.
-
-3)First of all,login using admin credentials.(POST request)
-
-{
-    "regno":1234,
-    "key":"gdscweb@sastra"
-}
-
-4)Add users to the database(POST request).
-
-{
-    "regno":125156072,
-    "email":"125156072@sastra.ac.in",
-    "password":"testaddusingadmin"
-}
-
-
-5)Login using one of the registered user.(POST request)
-
-{
-    "regno":125156072,
-    "password":"testaddusingadmin"
-}
-
-6)Select any one of three options:
-  '
-  
-  #Display all courses:
-
-  http://localhost:5001/enter/get/
-
-  #Register a course:
-
-  {
-    "course":"Laws of Cricket"
-}
-
-  #Display registered course:
-
-  http://localhost:5001/enter/show/
-
-
-7)Logout the user.
-
-8)Again login using admin credentials and select any of the four options:
-
-#Delete user:
-http://localhost:5001/enter/admin/delete/user/:id
-
-#Add user:
-http://localhost:5001/enter/admin/add/user/
-
-#Delete course:
-http://localhost:5001/enter/admin/delete/:id
-
-#Add course:
-http://localhost:5001/enter/admin/add/
-
-{
-    "name":"Laws of Cricket",
-    "description":"About cricket",
-    "mode":"offline",
-    "slots":15
-}
 
 9)Logout the admin.
 ## Tech Stack
