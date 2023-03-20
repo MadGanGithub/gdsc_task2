@@ -21,8 +21,11 @@ To run this project, you will need to add the following environment variables to
 ## How to use?
 
 1)Clone this repository and start the server.
+
     Steps to clone the repository in Visual Studio Code:
+    
     1)Click Clone git repository on the home page.
+    
     2)Copy the repository link from github and paste it over here.
 
 2)Open Postman app and create new request.
