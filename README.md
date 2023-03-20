@@ -27,6 +27,7 @@ To run this project, you will need to add the following environment variables to
     1)Click Clone git repository on the home page.
     
     2)Copy the repository link from github and paste it over here.
+    https://github.com/MadGanGithub/gdsc_task2-backend-only-.git
 
 2)Open Postman app and create new request.
 
@@ -39,6 +40,7 @@ To run this project, you will need to add the following environment variables to
 
 4)Add users to the database(POST request).
 
+Ex.
 {
     "regno":125156072,
     "email":"125156072@sastra.ac.in",
@@ -48,6 +50,7 @@ To run this project, you will need to add the following environment variables to
 
 5)Login using one of the registered user.(POST request)
 
+Ex.
 {
     "regno":125156072,
     "password":"testaddusingadmin"
@@ -57,17 +60,20 @@ To run this project, you will need to add the following environment variables to
   '
   
   #Display all courses:
-
+  
+  Ex.
   http://localhost:5001/enter/get/
 
   #Register a course:
-
+  
+  Ex.
   {
     "course":"Laws of Cricket"
 }
 
   #Display registered course:
-
+  
+  Ex.
   http://localhost:5001/enter/show/
 
 
@@ -76,14 +82,19 @@ To run this project, you will need to add the following environment variables to
 8)Again login using admin credentials and select any of the four options:
 
 #Delete user:
+
+Ex.
 http://localhost:5001/enter/admin/delete/user/:id
 
+Ex.
 #Add user:
 http://localhost:5001/enter/admin/add/user/
 
+Ex.
 #Delete course:
 http://localhost:5001/enter/admin/delete/:id
 
+Ex.
 #Add course:
 http://localhost:5001/enter/admin/add/
 
@@ -133,10 +144,10 @@ COURSE DATA
 }
 
 {
-    "name":"Divya Desam",
-    "description":"About 108 temples",
+    "name":"Carnatic Music",
+    "description":"About music",
     "mode":"online",
-    "slots":10
+    "slots":20
 }
 
 {
