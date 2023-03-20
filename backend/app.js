@@ -18,7 +18,11 @@ app.use(bodyParser.json())
 
 
 //api routes
-
+app.get("/",(req,res)=>{
+    res.send({
+        message:"Welcome to gdsc"
+    })
+})
 //User
 app.use("/enter/",userRoutes)
 //Admin
